@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color:#bcb8b1    
+}
+h1{
+    color:#489fb5;
+    text-shadow: 16px -2px 8px rgba(43, 226, 255, 1);
+}
+
+nav{
+    display:inline-block;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#slideshow{
+    width: 60vw;
+    height: 500px;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  
+  .slide{
+    float:left
+  }
+  
+  .slide img{
+  
+    height: 500px;
+    width: 60vw;
+  }
+  
+  .wrapper{
+    /* border: 5px solid black; */
+    width: calc(70vw*6);
+    animation:  15s ease infinite slider;
+  }
+  
+  @keyframes slider {
+    /* Calculate the margin-left for 
+    each of the slides */
+  
+    16% {
+      margin-left: 0px;
+    }
+    
+    32% {
+      margin-left: calc(-60vw * 1);
+    }
+    
+    48% {
+      margin-left: calc(-60vw * 2);
+    }
+    
+    64% {
+      margin-left: calc(-60vw* 3);
+    }
+  
+    80%{
+      margin-left:calc(-60vw*4);
+    }
+  
+    96%{
+      margin-left:calc(-60vw*5);
+    }
+  }
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
+a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 1.5rem;
+    padding: 2px;
+    font-weight: Bold;
+    text-shadow: 2px 2px #00ff37a8;
+
+}
+a:hover{
+    background-color:#555250;
+}
+
+li{
+    padding: 10px 10px;
+}
+img{
+    height: 4.5rem;
+}
+
+section{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 75vw;
+   
+    margin:30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure{
+    width: 250px;
+    border:1px solid #ccc;
+    margin:10px;
+    text-align: center;
+    box-shadow: 0px 0px 3px rgb(104,104,104);
+    transition: 100ms;
+    background-color:cornsilk
+}
+
+figure:hover{
+    transform: scale(1.01);
+    cursor:pointer;
+    background-color:#eaf4f4;
+}
+
+figure img{
+    height: 200px;
+    width: 100%;
+}
+figure img:hover{
+    cursor:zoom-in;
+    transform: scale(1.01);
+}
+
+figcaption button{
+    padding: 10px 20px;
+    margin:10px;
+    font-size: 16px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    background:none;
+}
+
+figcaption button:hover{
+    background: lightslategray;
+    color:white;
+    cursor: pointer;
+}
+
+figcaption p{
+    font-weight: 300;
+}
+@media screen and (max-width:620px){
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
